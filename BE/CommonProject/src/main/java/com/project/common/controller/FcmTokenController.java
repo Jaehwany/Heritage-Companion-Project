@@ -6,6 +6,8 @@ import com.project.common.dto.Push.FcmToken;
 import com.project.common.entity.User.UserEntity;
 import com.project.common.repository.User.UserRepository;
 import com.project.common.service.FirebaseCloudMessageService;
+
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
+@Api("FCM 토큰 API")
 @RequiredArgsConstructor
 @RequestMapping("/api/push")
 public class FcmTokenController {

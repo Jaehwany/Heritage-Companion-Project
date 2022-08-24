@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-@Api("MyPageController")
+@Api("마이페이지 API")
 @RequestMapping("/api/mypage")
 public class MyPageController {
 

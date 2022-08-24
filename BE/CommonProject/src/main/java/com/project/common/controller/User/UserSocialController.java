@@ -23,7 +23,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@Api("소셜 로그인 API")
+@Api(tags = {"소셜 로그인 API"})
 @RequestMapping("/api/user/social")
 public class UserSocialController {
 

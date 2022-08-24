@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@Api("회원 수정 API")
+@Api(tags = {"회원 수정 API"})
 @RestController
 @RequiredArgsConstructor    // autowired 안써도됨
 @RequestMapping("/api/modify")

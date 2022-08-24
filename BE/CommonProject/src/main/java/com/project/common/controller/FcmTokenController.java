@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@Api("FCM 토큰 API")
+@Api(tags = {"FCM 알림 API"})
 @RequiredArgsConstructor
 @RequestMapping("/api/push")
 public class FcmTokenController {

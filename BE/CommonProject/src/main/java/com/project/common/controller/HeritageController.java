@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-@Api("문화유산 API")
+@Api(tags = {"문화유산 API"})
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/heritage")

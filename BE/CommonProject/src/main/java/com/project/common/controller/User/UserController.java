@@ -27,7 +27,7 @@ import java.util.Collections;
 import java.util.Map;
 
 
-@Api("회원관리 API")
+@Api(tags = {"회원관리 API"})
 @RestController
 @RequiredArgsConstructor    // autowired 안써도됨
 @RequestMapping("/api/user")

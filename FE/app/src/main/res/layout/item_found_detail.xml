@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="stamp"
+            type="com.ssafy.heritage.data.dto.Stamp" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_found_detail"
+        android:elevation="4dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:translationZ="2dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verti_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_heritage"
+            glide="@{stamp.stampImgUrl}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/gl_verti_30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_b"
+            android:text="@{stamp.stampTitle}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gl_verti_30"
+            app:layout_constraintTop_toTopOf="@id/iv_heritage"
+            tools:text="이름" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_m"
+            android:text="@{stamp.heritageLocal}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_heritage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gl_verti_30"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:text="지역" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_check"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_checked"
+            android:visibility="@{stamp.found == 'Y' ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/iv_heritage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_heritage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

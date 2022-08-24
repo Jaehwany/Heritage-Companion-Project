@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api("ARController")
+@Api("AR API")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/ar")

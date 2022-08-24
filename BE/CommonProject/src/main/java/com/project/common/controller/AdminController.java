@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@Api("AdminController")
+@Api("관리자 API")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/admin")

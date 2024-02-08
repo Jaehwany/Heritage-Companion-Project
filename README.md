@@ -5,7 +5,7 @@
 <img src="https://user-images.githubusercontent.com/97875998/186781871-0b0237d8-7153-4dda-be06-d6125e05a6cc.png" align="left" width="90%" height="50%">
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
-
+ 
 ## 🗿 **Introduce**
 
 > **좋구만유**는 사용자의 실시간 위치를 기반으로 문화 유산 정보 및 동행 서비스를 제공하는 프로젝트 입니다.
